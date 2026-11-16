@@ -54,7 +54,7 @@ class Pawn: public Piece {
         virtual std::vector<Square> getLegalMoves(const std::string (&arr)[8][8], Square from) const override;
 };
 
-bool move(char piece, std::string position, std::string(&arr)[8][8]);
+bool move(char piece, std::string position, std::string(&arr)[8][8], int turn);
 
 
 #endif

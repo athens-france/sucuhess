@@ -113,11 +113,18 @@ void drawBoard(std::string (&arr)[8][8]) {
     }
 }
 
-bool move(char piece, std::string position, std::string(&arr)[8][8]) {
+bool move(char piece, std::string position, std::string(&arr)[8][8], int turn) {
 
     // algebraic notation to arr index
+    std::string color = "0";
 
-    std::string pieceToMove = std::string("w") + piece;
+    if (turn == 0) {
+        color = "w";
+    } else if (turn == 1) {
+        color = "b";
+    }
+
+    std::string pieceToMove = color + piece;
 
     std::transform(position.begin(), position.end(), position.begin(), ::tolower);
     if (position.length() != 2) {

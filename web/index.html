@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            width: 480px;
+            height: 480px;
+          background-color: #241A0F;
+        }
+      
+        .container > div {
+          padding: 15px;
+          font-size: 30px;
+          text-align: center;
+        }
+        .container > div:nth-child(16n + 1),
+.container > div:nth-child(16n + 3),
+.container > div:nth-child(16n + 5),
+.container > div:nth-child(16n + 7),
+.container > div:nth-child(16n + 10),
+.container > div:nth-child(16n + 12),
+.container > div:nth-child(16n + 14),
+.container > div:nth-child(16n + 16) {
+    background-color: #f1f1f1;
+    color: #241A0F;
+}
+
+.container > div:nth-child(16n + 2),
+.container > div:nth-child(16n + 4),
+.container > div:nth-child(16n + 6),
+.container > div:nth-child(16n + 8),
+.container > div:nth-child(16n + 9),
+.container > div:nth-child(16n + 11),
+.container > div:nth-child(16n + 13),
+.container > div:nth-child(16n + 15) {
+    background-color: #241A0F;
+    color: #f1f1f1;
+}
+      </style>
+</head>
+<body>
+
+    <h1>display: grid</h1>
+
+    <p>Use display: grid; to make a block-level grid container:</p>
+
+    <div class="container"></div>
+<script src="board.js"></script>
+</body>
+</html>
+
+
